@@ -9,16 +9,16 @@ const client = new Client({
 });
 
 client.once('ready', () => {
-    console.log('SilBot Ready!');
+    console.log('SilBot Online!');
 });
 
 client.on('messageCreate', async (message) => {
     if (message.author.bot) return;
-    if (message.content === '!ping') {
-        await message.reply('פונג! 🏓');
 
-
-
+    // בדיקה חדשה בעברית כדי לוודא שזה התעדכן במאה אחוז
+    if (message.content === '!פונג') {
+        await message.reply('פינג! 🏓 הבוט מעודכן ומקצועי.');
+    }
 });
 
 client.login(process.env.DISCORD_TOKEN);
